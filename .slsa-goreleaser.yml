@@ -1,0 +1,10 @@
+version: 1
+env:
+  - CGO_ENABLED=0
+flags:
+  - -trimpath
+  - -ldflags=-s -w -extldflags=-static
+main: ./cmd/main.go
+goos: linux
+goarch: amd64
+binary: binary-linux-amd64
